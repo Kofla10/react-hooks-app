@@ -9,16 +9,10 @@ const form = {
 
 export const FormWithCustomHook = () => {
 
-    const { formState, onInputChange } = useForm(form)
-    const {username, email, password } = formState;
+    const { username, email, formState, onInputChange, onReset  } = useForm(form)
 
-    // useEffect(() => {
-    // }, [username])
-
-    // useEffect(() => {
-    // }, [email])
-
-
+    //como enviamos el objeto desestructurado, nos evitamos de hacer la siguiente linea
+    // const { username, email, password } = formState
 
     return (
         <>
@@ -51,6 +45,8 @@ export const FormWithCustomHook = () => {
                 placeholder = 'Contraseña'
                 onChange    = {onInputChange}
             />
+
+            <button onClick={ onReset } className='btn btn-primary mt-2'> Reset </button>
         </>
     )
 }

@@ -9,9 +9,16 @@ export const useForm = (form = {}) => {
         setFormState( { ...formState, [name]: value})
     }
 
+    const onReset = ( ) => {
+
+        setFormState( form )
+    }
+
 
     return {
+        ...formState, //enviamos el objeto desestruturado
         formState,
-        onInputChange
+        onInputChange,
+        onReset
     }
 }

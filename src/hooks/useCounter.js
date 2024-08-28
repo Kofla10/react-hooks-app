@@ -6,7 +6,7 @@ export const useCounter = ( num = 10 ) => {
 
 
     const onSum = ( value = 1 ) => {
-       setCounter( counter + value);
+        setCounter( counter + value);
     }
 
     const onResta = (value = 1) => {
