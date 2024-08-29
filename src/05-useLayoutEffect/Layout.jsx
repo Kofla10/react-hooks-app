@@ -2,10 +2,10 @@ import React from 'react'
 
 import { useFech } from '../hooks'
 import { useCounter } from '../hooks'
-import { LoadingMessage } from './LoadingMessage'
-import { PokemonCard } from './PokemonCard'
+import { LoadingMessage } from '../03-examples/LoadingMessage'
+import { PokemonCard } from '../03-examples/PokemonCard'
 
-export const MultipleCustomHook = () => {
+export const Layout = () => {
 
     const { onSum, onResta, counter } = useCounter(1)
 
@@ -18,7 +18,7 @@ export const MultipleCustomHook = () => {
             <hr />
             { isLoading
                 ? <LoadingMessage/>
-                : <PokemonCard 
+                : <PokemonCard
                                id   = { data.id }
                                name = { data.name }
                                sprites = {[
